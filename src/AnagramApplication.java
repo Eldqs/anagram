@@ -43,7 +43,6 @@ public class AnagramApplication {
 
     private static boolean isAnagram(int currentFileIndex) {
         byte[] countsCopy = new byte[letterCounts.length];
-        byteBuffer = new byte[wordLength];
         System.arraycopy(letterCounts, 0, countsCopy, 0, letterCounts.length);
         System.arraycopy(fileContentBytes, currentFileIndex - wordLength, byteBuffer, 0, wordLength);
         for (byte b : byteBuffer) {
